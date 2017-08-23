@@ -1,6 +1,6 @@
 {
-  "name": "angularjs-emoji-picker",
-  "version": "0.0.1",
+  "name": "angularjs-emoji-picker-extended",
+  "version": "0.0.4",
   "authors": [
     {
       "name": "Alex Podobed",
@@ -35,7 +35,7 @@
   "homepage": "https://github.com/AlexPodobed/angular-emoji-picker",
   "repository": {
     "type": "git",
-    "url": "git://github.com/AlexPodobed/angular-emoji-picker.git"
+    "url": "git+ssh://git@github.com:AlexPodobed/angular-emoji-picker.git"
   },
   "ignore": [
     "**/.*",

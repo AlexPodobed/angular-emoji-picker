@@ -1,6 +1,6 @@
 {
-  "name": "angular-emoji-picker",
-  "version": "0.3.0",
+  "name": "angularjs-emoji-picker-extended",
+  "version": "0.0.4",
   "description": "AngularJS Emoji picker",
   "main": "Gruntfile.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/terranisu/angular-emoji-picker.git"
+    "url": "git+ssh://git@github.com:AlexPodobed/angular-emoji-picker.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
