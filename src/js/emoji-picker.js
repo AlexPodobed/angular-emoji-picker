@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('vkEmojiPicker', ['ngSanitize', 'templates-dist']).config(function () {
-  /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
   if (!String.fromCodePoint) {
     (function () {
       var defineProperty = (function () {

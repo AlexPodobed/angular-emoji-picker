@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('vkEmojiUiBootstrapExample', [
-  'ngMaterial',
   'ngMessages',
   'vkEmojiPicker',
-  'ui.bootstrap.popover',
-  'template/popover/popover-template.html'
+  'ui.bootstrap',
+  // 'template/popover/popover-template.html'
 ]).controller('EmojiController', [
   '$scope', function ($scope) {
     $scope.post = {

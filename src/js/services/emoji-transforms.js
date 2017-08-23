@@ -53,7 +53,7 @@ angular.module('vkEmojiPicker').factory('vkEmojiTransforms', [
 
       return input.replace(regex, function (match, text) {
         var className = text.replace(/_/g, '-');
-        var output = ['<i class="emoji-picker emoji-', className, '" alt="', text, '" title=":', text, ':"></i>'];
+        var output = ['<img class="emoji-picker emoji-', className, '" alt="', text, '" title=":', text, ':"/>'];
 
         return output.join('');
       });
