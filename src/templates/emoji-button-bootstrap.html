@@ -1,4 +1,6 @@
-<i class="emoji-picker emoji-smile"
+<i class="{{className}}"
    uib-popover-template="'templates/emoji-popover-bootstrap.html'"
    popover-placement="{{ !placement && 'left' || placement }}"
-   popover-title="{{ title }}"></i>
+   popover-is-open="pickerOpen"
+   popover-title="{{ title }}">
+</i>

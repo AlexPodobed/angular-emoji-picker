@@ -43,7 +43,11 @@
         </md-input-container>
         <section layout="row" layout-sm="row" layout-margin layout-align="center center">
           <md-button class="md-raised md-default">Post</md-button>
-          <span style="margin: 0 20px;" emoji-picker="post.message" placement="right" title="Emoji" recent-limit="12"></span>
+          <button type="button" ng-click="togglePopover()">toggle</button>
+          <span style="margin: 0 20px;" emoji-picker="post.message"
+                picker-open="open"
+                class-name="test test"
+                placement="right" title="Emoji" recent-limit="12"></span>
         </section>
       </form>
       <div layout="column">

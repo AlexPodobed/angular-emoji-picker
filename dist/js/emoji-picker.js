@@ -2,10 +2,12 @@ angular.module('templates-dist', ['templates/emoji-button-bootstrap.html', 'temp
 
 angular.module("templates/emoji-button-bootstrap.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("templates/emoji-button-bootstrap.html",
-    "<i class=\"emoji-picker emoji-smile\"\n" +
+    "<i class=\"{{className}}\"\n" +
     "   uib-popover-template=\"'templates/emoji-popover-bootstrap.html'\"\n" +
     "   popover-placement=\"{{ !placement && 'left' || placement }}\"\n" +
-    "   popover-title=\"{{ title }}\"></i>\n" +
+    "   popover-is-open=\"pickerOpen\"\n" +
+    "   popover-title=\"{{ title }}\">\n" +
+    "</i>\n" +
     "");
 }]);
 
@@ -1347,7 +1349,9 @@ angular.module('vkEmojiPicker').directive('emojiPicker', [
         model: '=emojiPicker',
         placement: '@',
         title: '@',
-        onChangeFunc: '='
+        onChangeFunc: '=',
+        pickerOpen: '=',
+        className: '@'
       },
       link: function ($scope, element, attrs) {
         var recentLimit = parseInt(attrs.recentLimit, 10) || RECENT_LIMIT;
@@ -1356,6 +1360,7 @@ angular.module('vkEmojiPicker').directive('emojiPicker', [
         $scope.groups = emojiGroups.groups;
         $scope.selectedGroup = emojiGroups.groups[0];
         $scope.selectedGroup.emoji = storage.getFirst(recentLimit);
+        $scope.className = $scope.className || 'emoji-picker emoji-smile';
 
         $scope.append = function (emoji) {
           if ($scope.model == null) {

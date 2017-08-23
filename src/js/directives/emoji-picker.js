@@ -22,7 +22,9 @@ angular.module('vkEmojiPicker').directive('emojiPicker', [
         model: '=emojiPicker',
         placement: '@',
         title: '@',
-        onChangeFunc: '='
+        onChangeFunc: '=',
+        pickerOpen: '=',
+        className: '@'
       },
       link: function ($scope, element, attrs) {
         var recentLimit = parseInt(attrs.recentLimit, 10) || RECENT_LIMIT;
@@ -31,6 +33,7 @@ angular.module('vkEmojiPicker').directive('emojiPicker', [
         $scope.groups = emojiGroups.groups;
         $scope.selectedGroup = emojiGroups.groups[0];
         $scope.selectedGroup.emoji = storage.getFirst(recentLimit);
+        $scope.className = $scope.className || 'emoji-picker emoji-smile';
 
         $scope.append = function (emoji) {
           if ($scope.model == null) {
