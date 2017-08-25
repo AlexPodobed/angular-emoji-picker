@@ -13,7 +13,7 @@ Installation
 The simplest way to install Emoji Picker is use [Bower](http://bower.io/).
 
 ```bash
-bower install angularjs-emoji-picker-extended@0.0.4 --save
+bower install angularjs-emoji-picker-extended@0.0.6 --save
 ```
 
 This will install the latest release.
